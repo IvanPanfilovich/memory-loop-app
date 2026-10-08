@@ -1,0 +1,740 @@
+{
+  "title": "Memory Loop",
+  "header": {
+    "profile": "Profile",
+    "signIn": "Sign In",
+    "install": "Install",
+    "credits": "credits",
+    "inviteFriend": "Invite",
+    "installDialog": {
+      "title": "Install Memory Loop",
+      "description": "Click the button below to install the app on your device.",
+      "manualDescription": "Follow these steps to install the app:",
+      "installButton": "Install Now",
+      "chromeTitle": "Chrome / Edge (Desktop):",
+      "chromeStep1": "Click the install icon in the address bar",
+      "chromeStep2": "Or go to Menu → Install Memory Loop",
+      "mobileTitle": "Mobile (Chrome / Safari):",
+      "mobileStep1": "Tap the menu button (three dots)",
+      "mobileStep2": "Select \"Add to Home Screen\" or \"Install App\"",
+      "note": "The install option may appear in your browser's menu or address bar."
+    }
+  },
+  "sidebar": {
+    "brand": "Memory Loop",
+    "main": "Home",
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms & Conditions",
+    "faq": "FAQ",
+    "profile": "Profile",
+    "logout": "Logout"
+  },
+  "landing": {
+    "title": "Welcome to Memory Loop",
+    "subtitle": "Welcome"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "loadError": "Failed to load recaps",
+    "sections": {
+      "pinned": "Pinned",
+      "today": "Today",
+      "thisWeek": "This week",
+      "thisMonth": "This month",
+      "earlier": "Earlier",
+      "viewAll": "View all",
+      "noRecaps": "No recaps here yet."
+    },
+    "search": {
+      "placeholder": "Search",
+      "clear": "Clear search"
+    },
+    "select": "Select",
+    "cancelSelection": "Cancel",
+    "deleteSelected": "Delete ({{count}})",
+    "createRecap": {
+      "linkRequired": "Please enter a YouTube link",
+      "documentsRequired": "Please upload at least one document",
+      "generating": "Creating recap...",
+      "button": "Create new recap",
+      "title": "Create new recap",
+      "description": "Choose a source to create a recap and flashcards.",
+      "youtube": "YouTube",
+      "documents": "Documents",
+      "youtubeTab": "YouTube Link",
+      "documentsTab": "Documents",
+      "textTab": "Upload your conspect",
+      "textPlaceholder": "Paste your notes (Markdown supported)...",
+      "textHint": "10-50,000 characters. Markdown supported.",
+      "textTooShort": "Please paste at least 10 characters",
+      "textTooLong": "Text is too long (max 50,000 characters)"
+    },
+    "zeroState": {
+      "title": "Turn any content into a recap that you will actually remember",
+      "inputPlaceholder": "Paste a YouTube link…",
+      "instructions": "Paste a YouTube link to create your first recap.",
+      "documentsInstructions": "Upload PDF or Word documents to create your first recap.",
+      "textInstructions": "Paste your own notes to generate flashcards. Your recap text will be saved exactly as provided.",
+      "generateButton": "Create recap"
+    },
+    "themes": {
+      "title": "Themes from this episode",
+      "untitled": "Untitled theme",
+      "clearAll": "Clear all",
+      "selectAll": "Select all",
+      "back": "Back to dashboard",
+      "sources": "Sources",
+      "generateError": "Failed to generate recap"
+    },
+    "material": {
+      "titleFallback": "Your personalised recap",
+      "back": "Back to dashboard",
+      "audioTitle": "Listen to your audio recap",
+      "summaryTitle": "Read the core ideas",
+      "flashcardsTitle": "Review with flashcards",
+      "sources": "Sources",
+      "copyMarkdown": "Copy markdown",
+      "editSummary": "Edit",
+      "cancelEdit": "Cancel",
+      "saveSummary": "Save",
+      "summaryEditPlaceholder": "Edit your summary (Markdown supported)...",
+      "summaryEditHint": "10-50,000 characters. Markdown supported.",
+      "badge": "Memory Loop recap",
+      "generatingAudio": "Generating audio...",
+      "almostThere": "Almost there...",
+      "finishingUp": "Finishing up your audio...",
+      "noAudio": "No audio available yet. Generate audio from your summary.",
+      "audioOutdated": "Audio is outdated. Generate a new version from your edited summary.",
+      "generateAudio": "Generate Audio",
+      "regenerateAudio": "Regenerate",
+      "ttsError": "Failed to generate audio",
+      "loadError": "Failed to load recap",
+      "summaryUpdated": "Summary updated.",
+      "summaryUpdateError": "Failed to update summary",
+      "summaryValidationError": "Summary must be 10-50,000 characters."
+    }
+  },
+  "home": {
+    "description": "Your platform",
+    "buttons": {
+      "signIn": "Sign In",
+      "noAccount": {
+        "text": "Don't have an account? ",
+        "link": "Sign up"
+      },
+      "goToHome": "Go to Home"
+    },
+    "dialogs": {
+      "signIn": {
+        "title": "Sign In",
+        "buttons": {
+          "signIn": "Sign In",
+          "signUp": "Sign Up",
+          "forgotPassword": "Forgot Password?",
+          "or": "or",
+          "google": "Continue with Google"
+        },
+        "errors": {
+          "emailVerification": {
+            "text1": "Please verify your email address",
+            "text2": "Check your inbox for a verification link"
+          },
+          "invalidCredentials": "Invalid email or password",
+          "accountNotVerified": "Please verify your email before signing in",
+          "accountLocked": "Account is locked. Please contact support",
+          "networkError": "Network error. Please check your connection and try again.",
+          "serverError": "Server error. Please try again later.",
+          "timeout": "Request timed out. Please try again.",
+          "unexpected": "Invalid email or password"
+        }
+      },
+      "signUp": {
+        "title": "Sign Up",
+        "successMessage": "Account created successfully! Please sign in with your credentials.",
+        "steps": {
+          "create": "Create Account",
+          "preferences": "Preferences",
+          "terms": "Terms & Conditions",
+          "consent": "Consent",
+          "verify": "Verify Email",
+          "complete": "Complete",
+          "buttons": {
+            "back": "Back",
+            "next": "Next"
+          }
+        },
+        "fields": {
+          "displayName": {
+            "label": "Display Name",
+            "placeholder": "Enter your display name"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "Enter your email"
+          },
+          "password": {
+            "label": "Password",
+            "placeholder": "Enter your password"
+          },
+          "confirmPassword": {
+            "label": "Confirm Password",
+            "placeholder": "Confirm your password"
+          },
+          "terms": {
+            "text1": "I agree to the ",
+            "text2": "Terms of Service",
+            "text3": " and ",
+            "text4": "Privacy Policy",
+            "text5": ".",
+            "checkbox": "I agree to the terms and conditions",
+            "validation": {
+              "required": "You must agree to the terms and conditions"
+            }
+          },
+          "verify": {
+            "label": "Click next and we will send a verification link to ",
+            "email": " so you can verify your account."
+          },
+          "complete": {
+            "label": "Go to your email inbox and follow the verification link to complete account creation.",
+            "detectingCountry": "Detecting your country...",
+            "countryNotDetected": "Country not detected",
+            "countryDetectionFailed": "Detection failed",
+            "countryDetectionNote": "We automatically detect your country based on your location. This helps us provide localized content.",
+            "accountCreated": "Account created successfully! Check your email for verification.",
+            "didntReceive": "Didn't receive the email?",
+            "resend": {
+              "button": "Resend Email",
+              "disabled": "Resend in {{time}}s",
+              "tooltip": "Please wait {{time}} seconds before resending",
+              "success": "Verification email sent successfully!",
+              "error": "Failed to send verification email. Please try again."
+            }
+          }
+        },
+        "buttons": {
+          "back": "Back",
+          "next": "Next"
+        }
+      },
+      "resetPassword": {
+        "title": "Reset Password",
+        "description": "Enter your email address and we'll send you a link to reset your password.",
+        "buttons": {
+          "back": "Back",
+          "send": "Send Reset Email",
+          "save": "Save New Password"
+        },
+        "fields": {
+          "email": {
+            "label": "Email Address",
+            "placeholder": "Enter your email address"
+          },
+          "password": {
+            "label": "New Password",
+            "placeholder": "Enter your new password"
+          },
+          "confirmPassword": {
+            "label": "Confirm New Password",
+            "placeholder": "Confirm your new password"
+          }
+        },
+        "messages": {
+          "emailSent": "Password reset email sent! Check your inbox.",
+          "passwordReset": "Password reset successfully! You can now sign in with your new password.",
+          "error": "Failed to reset password. Please try again.",
+          "invalidToken": "This password reset link is invalid or has expired. Please request a new one.",
+          "tokenUsed": "This password reset link has already been used. Please request a new one.",
+          "weakPassword": "Password does not meet security requirements. Please choose a stronger password.",
+          "userNotFound": "User account not found. Please request a new password reset link."
+        }
+      }
+    }
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signInTitle": "Welcome Back",
+    "home": "Home",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "emailRequired": "Email is required",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "passwordRequired": "Password is required",
+    "signingIn": "Signing In...",
+    "loginRequired": "Login Required",
+    "loginRequiredMessage": "You need to log in to access this page. Please sign in to continue.",
+    "loginSuccess": "Welcome back! You have successfully logged in.",
+    "googleLogin": "Continue with Google",
+    "oauthLoggingIn": "Signing in with {{provider}}...",
+    "oauthLoginSuccess": "Successfully signed in with {{provider}}!",
+    "oauthLoginError": "Failed to sign in. Please try again.",
+    "signUp": {
+      "successMessage": "Account created successfully! Please sign in with your credentials."
+    },
+    "verifyEmail": {
+      "processing": {
+        "title": "Verifying your email...",
+        "description": "Please wait while we verify your email address."
+      },
+      "success": {
+        "title": "Email verified successfully!",
+        "description": "Your email has been verified. Redirecting...",
+        "redirecting": "Redirecting..."
+      },
+      "error": {
+        "title": "Verification failed",
+        "description": "Something went wrong during email verification.",
+        "redirecting": "Redirecting to login page...",
+        "missingToken": "Verification token is missing. Please check your email for the correct link.",
+        "expired": "This verification link has expired. Please request a new one.",
+        "alreadyVerified": "This email has already been verified.",
+        "networkError": "Network error. Please check your connection and try again."
+      }
+    },
+    "errors": {
+      "invalidCredentials": "Invalid email or password",
+      "accountNotVerified": "Please verify your email before signing in",
+      "accountLocked": "Account is locked. Please contact support",
+      "unexpected": "Invalid email or password",
+      "invalidEmail": "Please enter a valid email address",
+      "invalidPassword": "Password must be 8-50 characters and contain uppercase, lowercase, number, and special character",
+      "invalidDisplayName": "Display name must be 3-20 characters",
+      "invalidDateOfBirth": "Date of birth must be in YYYY-MM-DD format",
+      "emailAlreadyRegistered": "An account with this email already exists",
+      "invalidRequest": "Please check your information and try again",
+      "serverError": "Server error. Please try again later",
+      "failedToRegister": "Failed to register the user!",
+      "loginFailed": "Login failed",
+      "registrationFailed": "Registration failed",
+      "unknownError": "Unknown error"
+    }
+  },
+  "globalFields": {
+    "dateOfBirth": {
+      "placeholder": "YYYY-MM-DD"
+    },
+    "displayName": {
+      "label": "Display Name",
+      "validation": {
+        "required": "Display name is required",
+        "minLength": "Display name must be at least 3 characters",
+        "maxLength": "Display name must not exceed 20 characters",
+        "range": "Display name must be between 3 and 20 characters"
+      }
+    },
+    "email": {
+      "label": "Email",
+      "validation": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address",
+        "minLength": "Email must be at least 3 characters",
+        "maxLength": "Email must not exceed 50 characters"
+      }
+    },
+    "password": {
+      "label": "Password",
+      "validation": {
+        "required": "Password is required",
+        "minLength": "Password must be at least 8 characters",
+        "maxLength": "Password must not exceed 50 characters",
+        "pattern": "Password must contain at least one uppercase letter, one lowercase letter, and one number",
+        "weakStrength": "Password strength is too weak"
+      }
+    },
+    "confirmPassword": {
+      "label": "Confirm Password",
+      "validation": {
+        "required": "Please confirm your password",
+        "match": "Passwords do not match"
+      }
+    },
+    "languages": {
+      "locale": {
+        "label": "Language",
+        "tooltip": "Select your preferred language"
+      }
+    }
+  },
+  "globals": {
+    "passwordStrength": {
+      "title": "Password Strength",
+      "tooltip": "Password should contain uppercase, lowercase, numbers, and special characters"
+    }
+  },
+  "oauth": {
+    "callback": {
+      "processing": {
+        "title": "Completing sign in...",
+        "description": "Please wait while we complete your Google sign in."
+      },
+      "success": {
+        "title": "Sign in successful!",
+        "description": "Welcome! Redirecting to your dashboard...",
+        "redirecting": "Redirecting..."
+      },
+      "error": {
+        "title": "Sign in failed",
+        "description": "Something went wrong during the sign in process.",
+        "redirecting": "Redirecting to login page..."
+      }
+    }
+  },
+  "theme": {
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "ui": {
+    "sidebar": "Sidebar",
+    "toggleSidebar": "Toggle Sidebar",
+    "sidebarDescription": "Displays the mobile sidebar.",
+    "close": "Close"
+  },
+  "validation": {
+    "email": {
+      "required": "Email is required",
+      "invalid": "Please enter a valid email address"
+    },
+    "password": {
+      "required": "Password is required",
+      "minLength": "Password must be at least 6 characters"
+    }
+  },
+  "footer": {
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms & Conditions",
+    "contactUs": "Contact Us"
+  },
+  "profile": {
+    "title": "Profile",
+    "notAuthenticated": {
+      "title": "Not Authenticated",
+      "description": "Please log in to view your profile."
+    },
+    "sections": {
+      "personalInfo": "Personal Information",
+      "contactInfo": "Contact Information",
+      "preferences": "Preferences",
+      "accountInfo": "Account Information"
+    },
+    "fields": {
+      "name": "Name",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "displayName": "Display Name",
+      "email": "Email",
+      "userId": "User ID",
+      "dateOfBirth": {
+        "label": "Date of Birth",
+        "validation": {
+          "required": "Date of birth is required",
+          "invalid": "Invalid date format",
+          "format": "Please enter date in YYYY-MM-DD format",
+          "future": "Date of birth must be in the past",
+          "age": "You must be at least 13 years old"
+        }
+      },
+      "language": "Language",
+      "currency": "Currency",
+      "country": "Country",
+      "accountType": "Account Type",
+      "memberSince": "Member Since",
+      "status": "Status",
+      "notSet": "Not set",
+      "anonymous": "Anonymous",
+      "registered": "Registered",
+      "recently": "Recently",
+      "active": "Active"
+    },
+    "actions": {
+      "logout": "Logout",
+      "deleteAccount": "Delete Account",
+      "backToHome": "Back to Home"
+    },
+    "deleteAccount": {
+      "title": "Delete Account",
+      "description": "This action cannot be undone. This will permanently delete your account and remove all your data from our servers.",
+      "enterPassword": "Enter your password to continue",
+      "enterEmail": "Enter your email to continue",
+      "passwordPlaceholder": "Enter your password",
+      "emailPlaceholder": "Enter your email",
+      "warning": "This action cannot be undone. All your data will be permanently deleted.",
+      "continue": "Continue",
+      "confirmTitle": "Are you absolutely sure?",
+      "confirmDescription": "This will permanently delete your account and all associated data.",
+      "finalWarning": "This action cannot be undone. This will permanently delete:",
+      "warning1": "Your account and profile information",
+      "warning3": "All your settings and preferences",
+      "confirmPassword": "You are about to permanently delete your account.",
+      "confirmOAuth": "You are about to permanently delete the account associated with {email}.",
+      "deleting": "Deleting...",
+      "deletePermanently": "Yes, delete permanently",
+      "successMessage": "Account deleted successfully",
+      "errorMessage": "Failed to delete account. Please try again.",
+      "unsupportedAuthType": "Unsupported authentication type. Please contact support.",
+      "debugInfo": "Debug: oauth={{oauth}}, user={{user}}"
+    },
+    "errors": {
+      "validationErrors": "Please fix validation errors before saving"
+    },
+    "updateSuccess": "Profile updated successfully!",
+    "updateError": "Failed to save changes. Please try again.",
+    "validation": {
+      "invalidDate": "Invalid date format",
+      "dateInPast": "Date of birth must be in the past",
+      "minAge": "You must be at least 13 years old",
+      "localeMaxLength": "Locale must not exceed 100 characters",
+      "currencyMaxLength": "Currency must not exceed 100 characters"
+    },
+    "theme": {
+      "title": "Theme Customization",
+      "description": "Customize your theme colors separately for light and dark mode",
+      "premiumOnly": "Theme customization is available for premium users only. Upgrade to unlock this feature.",
+      "premiumDescription": "Customize your theme colors separately for light and dark mode. Make the interface truly yours with personalized color schemes.",
+      "lightMode": "Light Mode",
+      "darkMode": "Dark Mode",
+      "reset": "Reset",
+      "resetConfirm": "Are you sure you want to reset all colors to default?",
+      "groups": {
+        "base": "Base Colors",
+        "primary": "Primary Colors",
+        "secondary": "Secondary Colors",
+        "accent": "Accent Colors",
+        "destructive": "Error/Destructive Colors",
+        "muted": "Muted Colors",
+        "utility": "Utility Colors"
+      },
+      "colors": {
+        "background": "Background",
+        "foreground": "Foreground",
+        "card": "Card",
+        "cardForeground": "Card Text",
+        "popover": "Popover",
+        "popoverForeground": "Popover Text",
+        "primary": "Primary",
+        "primaryForeground": "Primary Text",
+        "secondary": "Secondary",
+        "secondaryForeground": "Secondary Text",
+        "accent": "Accent",
+        "accentForeground": "Accent Text",
+        "destructive": "Destructive",
+        "destructiveForeground": "Destructive Text",
+        "muted": "Muted",
+        "mutedForeground": "Muted Text",
+        "border": "Border",
+        "input": "Input",
+        "ring": "Focus Ring"
+      }
+    },
+    "themeCustomizer": {
+      "resetConfirmTitle": "Reset Theme Colors?",
+      "resetConfirmDescription": "Are you sure you want to reset all custom theme colors to their default values? This action cannot be undone.",
+      "resetSuccess": "Theme colors reset to defaults.",
+      "resetError": "Failed to reset theme colors.",
+      "apply": "Apply Changes",
+      "applySuccess": "Theme colors applied successfully!"
+    }
+  },
+  "paywall": {
+    "headline": "Turn every podcast into a mini-course you actually remember",
+    "subheadline": "Paste a YouTube link, pick the themes you care about, and get a short AI-generated recap podcast plus flashcards to lock in the key ideas.",
+    "feature1": {
+      "title": "Personalised recap audio",
+      "description": "a short \"second podcast\" with only the parts that matter to you"
+    },
+    "feature2": {
+      "title": "Theme-based summaries",
+      "description": "choose topics you found interesting, skip the rest"
+    },
+    "feature3": {
+      "title": "Smart flashcards",
+      "description": "key facts turned into bite-sized cards for faster learning and recall"
+    },
+    "loading": "Loading...",
+    "goToProfile": "Go to Profile",
+    "cta": "Unlock personalised recaps & flashcards",
+    "checkoutError": "Failed to start checkout. Please try again."
+  },
+  "languages": {
+    "en": "English",
+    "ru": "Русский"
+  },
+  "common": {
+    "loading": "Loading...",
+    "redirecting": "Redirecting...",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "backToHome": "Back to Home",
+    "ok": "OK",
+    "continue": "Continue",
+    "unexpectedError": "Something went wrong",
+    "keep": "Keep subscription",
+    "close": "Close",
+    "confirm": "Confirm"
+  },
+  "languageSwitcher": {
+    "saveError": "Failed to save language preference"
+  },
+  "errors": {
+    "pageNotFound": "404 - Page Not Found"
+  },
+  "notFound": {
+    "errorCode": "404",
+    "title": "Page Not Found",
+    "description": "Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or you entered the wrong URL.",
+    "goHome": "Go to Homepage",
+    "goBack": "Go Back"
+  },
+  "resetPassword": {
+    "title": "Reset Password"
+  },
+  "currencies": {
+    "USD": "US Dollar",
+    "EUR": "Euro",
+    "GBP": "British Pound",
+    "JPY": "Japanese Yen",
+    "CAD": "Canadian Dollar",
+    "AUD": "Australian Dollar",
+    "CHF": "Swiss Franc",
+    "CNY": "Chinese Yuan",
+    "SEK": "Swedish Krona",
+    "NZD": "New Zealand Dollar"
+  },
+  "accessibility": {
+    "toggleTheme": "Toggle theme",
+    "goToPreviousPage": "Go to previous page",
+    "goToNextPage": "Go to next page",
+    "commandPalette": "Command Palette",
+    "commandDescription": "Search for a command to run...",
+    "pagination": "pagination",
+    "breadcrumb": "breadcrumb",
+    "previous": "Previous",
+    "next": "Next",
+    "morePages": "More pages",
+    "more": "More",
+    "previousSlide": "Previous slide",
+    "nextSlide": "Next slide"
+  },
+  "roleBasedWrapper": {
+    "insufficientPermissions": "You do not have permission to perform this action",
+    "roles": {
+      "admin": "Admin",
+      "collaborator": "Collaborator"
+    },
+    "permissions": {
+      "manageUsers": "Manage Users",
+      "createInvites": "Create Invites",
+      "removeUsers": "Remove Users",
+      "updateUserRoles": "Update User Roles"
+    },
+    "tooltips": {
+      "createInvites": "This function is only allowed for admins",
+      "manageUsers": "This function is only allowed for admins"
+    }
+  },
+  "notifications": {
+    "errors": {
+      "serverError": {
+        "title": "Server Error",
+        "description": "Something went wrong. Please try again later."
+      }
+    }
+  },
+  "popup": {
+    "close": "Close"
+  },
+  "flashcard": {
+    "clickToFlip": "Click to flip",
+    "clickToFlipBack": "Click to flip back"
+  },
+  "audio": {
+    "noAudioAvailable": "No audio available",
+    "play": "Play",
+    "pause": "Pause"
+  },
+  "referrals": {
+    "title": "Invite a Friend",
+    "description": "Share your referral link and earn credits! Rewards depend on how many credits your invited friend uses.",
+    "referralCode": "Your Referral Code",
+    "inviteLink": "Invite Link",
+    "referredCount": "Friends Referred",
+    "share": "Share",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "codeCopied": "Referral code copied!",
+    "copiedToast": "Invite link copied to clipboard!",
+    "copyError": "Failed to copy link",
+    "fetchError": "Failed to load referral information",
+    "loading": "Loading referral information...",
+    "shareTitle": "Join Memory Loop",
+    "shareText": "Join Memory Loop and start creating personalized recaps! Use my invite link:",
+    "tryAgain": "Try Again",
+    "enterCodeTitle": "Enter Referral Code",
+    "enterCodeDescription": "Enter your referral code to get credits when you sign up.",
+    "codePlaceholder": "Referral Code (Optional)",
+    "enterCode": "Please enter a referral code",
+    "codeSavedSuccessfully": "Referral code saved successfully! Proceed to sign up via email or OAuth.",
+    "saveError": "Failed to save referral code. Please try again.",
+    "haveCode": "Have a referral code?"
+  },
+  "recap": {
+    "status": {
+      "processing": "Processing...",
+      "generating": "Generating...",
+      "generatingAudio": "Generating audio..."
+    },
+    "recap": "recap",
+    "min": "min",
+    "cards": "cards",
+    "lastReviewed": "last reviewed",
+    "pin": "Pin",
+    "unpin": "Unpin",
+    "renameMenu": "Rename",
+    "deleteMenu": "Delete",
+    "renameError": "Failed to rename recap",
+    "deleteError": "Failed to delete recap",
+    "pinError": "Failed to update pin status",
+    "rename": {
+      "title": "Rename recap",
+      "description": "Enter a new name for this recap.",
+      "placeholder": "Recap title"
+    },
+    "delete": {
+      "title": "Delete recap",
+      "description": "Are you sure you want to delete this recap? This action cannot be undone.",
+      "recapName": "Recap:",
+      "confirm": "Delete recap"
+    }
+  },
+  "cookieConsent": {
+    "title": "Cookie & Analytics Consent",
+    "description": "We use Google Analytics to understand how visitors interact with our website. This helps us improve your experience. You can choose to allow or decline analytics tracking.",
+    "allow": "Allow Analytics",
+    "decline": "Decline"
+  },
+  "documentUpload": {
+    "dragDrop": "Drag and drop documents here, or",
+    "browse": "browse",
+    "supportedFormats": "Supported formats: PDF, Word (.docx)",
+    "maxFiles": "Max {{count}} files",
+    "maxFilesExceeded": "You can only upload a maximum of {{count}} files.",
+    "maxFilesReached": "Maximum {{count}} files allowed",
+    "maxTotalSize": "Max total size: {{size}}",
+    "totalSize": "Total: {{size}} / {{max}}",
+    "filesCount": "{{count}} of {{max}} files",
+    "fileTooLarge": "File \"{{name}}\" is too large. Total size must not exceed {{size}}.",
+    "totalSizeExceeded": "Total size limit reached. Maximum total size is {{size}}.",
+    "invalidFileType": "Invalid file type. Please upload PDF or Word (.docx) files only."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about Memory Loop",
+    "error": "Failed to load FAQ content",
+    "searchPlaceholder": "Search FAQs...",
+    "clearSearch": "Clear search",
+    "searchResults": "{{count}} result(s) found",
+    "noResults": "No results found",
+    "tryDifferentSearch": "Try a different search term"
+  }
+}

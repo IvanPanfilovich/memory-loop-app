@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+*.config.js
+*.config.ts
+vite.config.ts
+public/
+package-lock.json
+yarn.lock

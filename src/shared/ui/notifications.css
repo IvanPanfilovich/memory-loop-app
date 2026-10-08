@@ -1,0 +1,188 @@
+/* Theme-aware toast notifications */
+.toast-theme-aware {
+  /* Base theme colors - reversed */
+  background: var(--card-foreground) !important;
+  color: var(--card) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Notification dialog - highest z-index */
+.notification-dialog {
+  z-index: 999999 !important;
+}
+
+/* Notification dialog overlay - highest z-index */
+.notification-dialog[data-state='open'] {
+  z-index: 999999 !important;
+}
+
+/* Ensure notification dialog appears above everything */
+[data-notification-dialog] {
+  z-index: 999999 !important;
+}
+
+[data-notification-dialog] [data-radix-dialog-overlay] {
+  z-index: 999999 !important;
+}
+
+[data-notification-dialog] [data-radix-dialog-content] {
+  z-index: 999999 !important;
+}
+
+/* Force notification dialog overlay to be above all other overlays */
+[data-radix-dialog-overlay][data-notification-dialog] {
+  z-index: 999999 !important;
+}
+
+/* Ensure notification dialog portal is above everything */
+[data-radix-dialog-portal] {
+  z-index: 999999 !important;
+}
+
+/* Force all notification dialog elements to highest z-index */
+.notification-dialog,
+.notification-dialog *,
+[data-notification-dialog],
+[data-notification-dialog] * {
+  z-index: 999999 !important;
+}
+
+/* Custom notification overlay - highest z-index */
+[data-notification-dialog] {
+  z-index: 999999 !important;
+  pointer-events: auto !important;
+}
+
+[data-notification-dialog] > div {
+  z-index: 999999 !important;
+  pointer-events: auto !important;
+}
+
+[data-notification-dialog] button {
+  z-index: 999999 !important;
+  pointer-events: auto !important;
+}
+
+/* Sonner toast close button - matches notification colors */
+.toast-theme-aware [data-close-button] {
+  background: var(--card-foreground) !important;
+  color: var(--card) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.toast-theme-aware [data-close-button]:hover {
+  background: var(--card) !important;
+  color: var(--card-foreground) !important;
+  opacity: 0.8 !important;
+}
+
+/* Notification dialog close button - matches notification colors */
+.toast-theme-aware .notification-close-btn {
+  background: var(--card-foreground) !important;
+  color: var(--card) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.toast-theme-aware .notification-close-btn:hover {
+  background: var(--card) !important;
+  color: var(--card-foreground) !important;
+  opacity: 0.8 !important;
+}
+
+/* Toast type variations using theme colors - reversed */
+.toast-theme-aware[data-type='success'] {
+  background: var(--green-900, var(--card-foreground)) !important;
+  color: var(--green-50, var(--card)) !important;
+  border-color: var(--green-200, var(--border)) !important;
+}
+
+.toast-theme-aware[data-type='success'] .notification-close-btn,
+.toast-theme-aware[data-type='success'] [data-close-button] {
+  background: var(--green-900, var(--card-foreground)) !important;
+  color: var(--green-50, var(--card)) !important;
+}
+
+.toast-theme-aware[data-type='error'] {
+  background: var(--red-900, var(--card-foreground)) !important;
+  color: var(--red-50, var(--card)) !important;
+  border-color: var(--red-200, var(--border)) !important;
+}
+
+.toast-theme-aware[data-type='error'] .notification-close-btn,
+.toast-theme-aware[data-type='error'] [data-close-button] {
+  background: var(--red-900, var(--card-foreground)) !important;
+  color: var(--red-50, var(--card)) !important;
+}
+
+.toast-theme-aware[data-type='warning'] {
+  background: var(--yellow-900, var(--card-foreground)) !important;
+  color: var(--yellow-50, var(--card)) !important;
+  border-color: var(--yellow-200, var(--border)) !important;
+}
+
+.toast-theme-aware[data-type='warning'] .notification-close-btn,
+.toast-theme-aware[data-type='warning'] [data-close-button] {
+  background: var(--yellow-900, var(--card-foreground)) !important;
+  color: var(--yellow-50, var(--card)) !important;
+}
+
+.toast-theme-aware[data-type='info'] {
+  background: var(--blue-900, var(--card-foreground)) !important;
+  color: var(--blue-50, var(--card)) !important;
+  border-color: var(--blue-200, var(--border)) !important;
+}
+
+.toast-theme-aware[data-type='info'] .notification-close-btn,
+.toast-theme-aware[data-type='info'] [data-close-button] {
+  background: var(--blue-900, var(--card-foreground)) !important;
+  color: var(--blue-50, var(--card)) !important;
+}
+
+/* Dark mode overrides - reversed */
+.dark .toast-theme-aware[data-type='success'] {
+  background: var(--green-50, var(--card-foreground)) !important;
+  color: var(--green-900, var(--card)) !important;
+  border-color: var(--green-700, var(--border)) !important;
+}
+
+.dark .toast-theme-aware[data-type='success'] .notification-close-btn,
+.dark .toast-theme-aware[data-type='success'] [data-close-button] {
+  background: var(--green-50, var(--card-foreground)) !important;
+  color: var(--green-900, var(--card)) !important;
+}
+
+.dark .toast-theme-aware[data-type='error'] {
+  background: var(--red-50, var(--card-foreground)) !important;
+  color: var(--red-900, var(--card)) !important;
+  border-color: var(--red-700, var(--border)) !important;
+}
+
+.dark .toast-theme-aware[data-type='error'] .notification-close-btn,
+.dark .toast-theme-aware[data-type='error'] [data-close-button] {
+  background: var(--red-50, var(--card-foreground)) !important;
+  color: var(--red-900, var(--card)) !important;
+}
+
+.dark .toast-theme-aware[data-type='warning'] {
+  background: var(--yellow-50, var(--card-foreground)) !important;
+  color: var(--yellow-900, var(--card)) !important;
+  border-color: var(--yellow-700, var(--border)) !important;
+}
+
+.dark .toast-theme-aware[data-type='warning'] .notification-close-btn,
+.dark .toast-theme-aware[data-type='warning'] [data-close-button] {
+  background: var(--yellow-50, var(--card-foreground)) !important;
+  color: var(--yellow-900, var(--card)) !important;
+}
+
+.dark .toast-theme-aware[data-type='info'] {
+  background: var(--blue-50, var(--card-foreground)) !important;
+  color: var(--blue-900, var(--card)) !important;
+  border-color: var(--blue-700, var(--border)) !important;
+}
+
+.dark .toast-theme-aware[data-type='info'] .notification-close-btn,
+.dark .toast-theme-aware[data-type='info'] [data-close-button] {
+  background: var(--blue-50, var(--card-foreground)) !important;
+  color: var(--blue-900, var(--card)) !important;
+}

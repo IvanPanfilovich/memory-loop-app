@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap&subset=latin,latin-ext,cyrillic,cyrillic-ext');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* Ensure proper scrolling */
+html,
+body {
+  height: 100%;
+  scroll-behavior: auto;
+}
+
+/* Global scrollbar styles for main page - hidden scrollbar */
+html {
+  scrollbar-width: none; /* Firefox - hide scrollbar */
+  -ms-overflow-style: none; /* IE and Edge - hide scrollbar */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera - hide scrollbar */
+  width: 0;
+  height: 0;
+}
+
+/* Global ScrollArea Styles */
+[data-radix-scroll-area-viewport] {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+[data-radix-scroll-area-viewport]::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+[data-radix-scroll-area-viewport]::-webkit-scrollbar-track {
+  background: transparent;
+}
+[data-radix-scroll-area-viewport]::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 9999px;
+}
+[data-radix-scroll-area-viewport]::-webkit-scrollbar-thumb:hover {
+  background-color: var(--muted-foreground);
+}
+
+/* Custom Scrollbar Styles (fallback) */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: var(--muted); /* fixed */
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: var(--muted-foreground); /* fixed */
+}
+.scrollbar-track-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thumb-muted::-webkit-scrollbar-thumb {
+  background-color: var(--muted);
+}
+.scrollbar-thumb-rounded-full::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+}
+
+/* Tailwind v4: custom variant + theme bridge */
+@custom-variant dark (&:is(.dark *));
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+/* =========================
+   THEME TOKENS (OKLCH)
+   Light as default; Dark via .dark
+   ========================= */
+:root {
+  --radius: 1rem;
+
+  --background: oklch(98.5% 0.002 240);
+  --foreground: oklch(15% 0.01 260);
+  --card: oklch(100% 0 0);
+  --card-foreground: oklch(15% 0.01 260);
+  --popover: oklch(100% 0 0);
+  --popover-foreground: oklch(15% 0.01 260);
+
+  --primary: oklch(55% 0.22 280);
+  --primary-foreground: oklch(98% 0.005 280);
+
+  --secondary: oklch(92% 0.008 280);
+  --secondary-foreground: oklch(25% 0.015 280);
+
+  --muted: oklch(94% 0.005 250);
+  --muted-foreground: oklch(45% 0.01 260);
+
+  --accent: oklch(88% 0.015 280);
+  --accent-foreground: oklch(20% 0.015 280);
+
+  --destructive: oklch(58% 0.24 15);
+  --destructive-foreground: oklch(98% 0.005 15);
+
+  --border: oklch(88% 0.005 260);
+  --input: oklch(90% 0.005 260);
+  --ring: oklch(55% 0.22 280);
+
+  --chart-1: oklch(55% 0.22 280);
+  --chart-2: oklch(65% 0.18 200);
+  --chart-3: oklch(70% 0.15 320);
+  --chart-4: oklch(60% 0.2 40);
+  --chart-5: oklch(50% 0.18 160);
+
+  --sidebar-background: oklch(97% 0.003 250);
+  --sidebar-foreground: oklch(40% 0.01 260);
+  --sidebar-primary: oklch(55% 0.22 280);
+  --sidebar-primary-foreground: oklch(98% 0.005 280);
+  --sidebar-accent: oklch(92% 0.008 280);
+  --sidebar-accent-foreground: oklch(25% 0.015 280);
+  --sidebar-border: oklch(85% 0.005 260);
+  --sidebar-ring: oklch(55% 0.22 280);
+  --sidebar: oklch(97% 0.003 250);
+
+  /* Safe area padding */
+  --safe-padding-x: max(env(safe-area-inset-left), 4rem);
+}
+
+/* Mobile safe padding */
+@media (max-width: 500px) {
+  :root {
+    --safe-padding-x: max(env(safe-area-inset-left), 1rem);
+  }
+}
+
+/* Tailwind @theme inline mapping to actual colors */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar-background: var(--sidebar-background);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar: var(--sidebar);
+}
+
+.dark {
+  --background: oklch(12% 0.015 260);
+  --foreground: oklch(95% 0.005 280);
+  --card: oklch(14% 0.015 260);
+  --card-foreground: oklch(95% 0.005 280);
+  --popover: oklch(14% 0.015 260);
+  --popover-foreground: oklch(95% 0.005 280);
+
+  --primary: oklch(65% 0.2 280);
+  --primary-foreground: oklch(98% 0.005 280);
+
+  --secondary: oklch(28% 0.02 280);
+  --secondary-foreground: oklch(90% 0.01 280);
+
+  --muted: oklch(20% 0.015 260);
+  --muted-foreground: oklch(75% 0.01 280);
+
+  --accent: oklch(25% 0.02 280);
+  --accent-foreground: oklch(95% 0.005 280);
+
+  --destructive: oklch(62% 0.24 15);
+  --destructive-foreground: oklch(98% 0.005 15);
+
+  --border: oklch(25% 0.015 260);
+  --input: oklch(22% 0.015 260);
+  --ring: oklch(65% 0.2 280);
+
+  --chart-1: oklch(65% 0.2 280);
+  --chart-2: oklch(70% 0.18 200);
+  --chart-3: oklch(75% 0.15 320);
+  --chart-4: oklch(68% 0.18 40);
+  --chart-5: oklch(60% 0.18 160);
+
+  --sidebar-background: oklch(10% 0.01 260);
+  --sidebar-foreground: oklch(80% 0.01 280);
+  --sidebar-primary: oklch(65% 0.2 280);
+  --sidebar-primary-foreground: oklch(98% 0.005 280);
+  --sidebar-accent: oklch(18% 0.02 280);
+  --sidebar-accent-foreground: oklch(95% 0.005 280);
+  --sidebar-border: oklch(22% 0.015 260);
+  --sidebar-ring: oklch(65% 0.2 280);
+  --sidebar: oklch(10% 0.01 260);
+}
+
+/* Base layer mappings */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-family: 'Noto Sans', 'Noto Sans HK', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Prevent iOS Safari from scaling images incorrectly */
+  img {
+    max-width: 100%;
+    height: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  .h-screen {
+    height: 100dvh;
+  }
+  .max-h-screen {
+    max-height: 100dvh;
+  }
+  .w-screen {
+    width: 100dvw;
+  }
+  .max-w-screen {
+    max-width: 100dvw;
+  }
+
+  /* Hide scrollbar (webkit) */
+  .scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar (IE/Edge/Firefox) */
+  .scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+  }
+
+  /* Header spacing fix */
+  .main-content {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 4.5rem);
+    background-color: var(--sidebar);
+    margin-top: 0;
+  }
+
+  /* Ensure header has solid background and no gaps */
+  header {
+    background-color: var(--sidebar) !important;
+    border-bottom: 1px solid var(--sidebar-border);
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  /* Light theme header fix - ensure solid background */
+  header:not(.dark) {
+    background-color: var(--sidebar) !important;
+  }
+
+  /* Dark theme header fix */
+  .dark header {
+    background-color: var(--sidebar) !important;
+  }
+
+  /* Ensure the main container has proper background */
+  .flex.flex-col.h-screen {
+    background-color: var(--background);
+  }
+
+  /* Mobile-specific header spacing fix */
+  @media (max-width: 1000px) {
+    .main-content {
+      padding-top: calc(env(safe-area-inset-top, 0px) + 4rem);
+      margin-top: 0;
+    }
+  }
+
+  /* Ensure main element uses flexbox for sticky footer */
+  .main-content main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Ensure Router content wrapper takes available space */
+  .main-content main > div:first-child {
+    flex: 1 0 auto;
+    min-height: 0;
+  }
+
+  /* Ensure no gap between header and ScrollArea */
+  .flex.flex-col.h-screen .main-content {
+    margin-top: 0;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 4.5rem);
+  }
+
+  /* Mobile-specific header spacing fix for flex container */
+
+  /* Safari-specific fixes for object-contain scaling issues */
+  @supports (-webkit-appearance: none) {
+    .group:hover img {
+      transform-origin: center center;
+      will-change: transform;
+    }
+
+    /* Fix Safari object-contain scaling issues */
+    img[class*='object-contain'] {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+  }
+
+  /* iOS Safari specific fixes for image scaling issues */
+  @media screen and (-webkit-min-device-pixel-ratio: 1) {
+    /* Fix iOS Safari viewport scaling issues */
+    img {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    /* Fix iOS Safari object-contain scaling */
+    img[class*='object-contain'] {
+      -webkit-transform: translateZ(0) scale(1);
+      transform: translateZ(0) scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+    }
+
+    /* Prevent iOS Safari from over-scaling images */
+    .group:hover img {
+      -webkit-transform: translateZ(0) scale(1.05);
+      transform: translateZ(0) scale(1.05);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+    }
+  }
+  @media (max-width: 1000px) {
+    .flex.flex-col.h-screen .main-content {
+      padding-top: calc(env(safe-area-inset-top, 0px) + 4rem);
+    }
+  }
+
+  /* Themed scrollbar */
+  .themed-scrollbar {
+    scrollbar-width: thin;
+  } /* fixed */
+  .themed-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  .themed-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+  }
+  .themed-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--muted-foreground);
+    border-radius: 8px;
+    border: 2px solid transparent;
+  }
+  .themed-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: var(--foreground);
+  }
+
+  .optimized-blur {
+    @apply transform;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Video Player Styles */
+  .video-player-play-overlay {
+    @apply absolute inset-0 flex items-center justify-center z-10;
+    background-color: transparent;
+  }
+
+  .video-player-play-button {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2 text-lg font-semibold z-20;
+  }
+
+  .video-player-controls-overlay {
+    @apply absolute inset-0;
+    background: transparent;
+  }
+
+  .video-player-control-button {
+    @apply text-foreground hover:bg-foreground/20 transition-colors duration-200;
+  }
+
+  .video-player-progress-slider {
+    @apply w-full h-1 bg-muted/30 rounded-lg appearance-none cursor-pointer;
+  }
+
+  .video-player-progress-slider::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 rounded-full bg-primary cursor-pointer shadow-lg;
+  }
+
+  .video-player-progress-slider::-moz-range-thumb {
+    @apply w-4 h-4 rounded-full bg-primary cursor-pointer border-0 shadow-lg;
+  }
+
+  .video-player-volume-slider {
+    @apply w-20 h-1 bg-muted/30 rounded-lg appearance-none cursor-pointer;
+  }
+
+  .video-player-volume-slider::-webkit-slider-thumb {
+    @apply appearance-none w-3 h-3 rounded-full bg-foreground cursor-pointer shadow-md;
+  }
+
+  .video-player-volume-slider::-moz-range-thumb {
+    @apply w-3 h-3 rounded-full bg-foreground cursor-pointer border-0 shadow-md;
+  }
+
+  /* Focus states for accessibility */
+  .video-player-progress-slider:focus,
+  .video-player-volume-slider:focus {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  .video-player-control-button:focus {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Year picker dropdown scrollbar hiding */
+  .rdp-dropdown {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  .rdp-dropdown::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+
+/* Higher z-index for recap card dialogs (rename and delete) */
+[data-slot='dialog-portal']:has(.recap-dialog-high-z) {
+  z-index: 100 !important;
+}
+
+[data-slot='dialog-portal']:has(.recap-dialog-high-z) [data-slot='dialog-overlay'] {
+  z-index: 100 !important;
+  pointer-events: auto !important;
+}
+
+[data-slot='dialog-portal']:has(.recap-dialog-high-z) [data-slot='dialog-content'] {
+  z-index: 100 !important;
+  pointer-events: auto !important;
+}
+
+/* Fallback for browsers that don't support :has() */
+.recap-dialog-high-z {
+  z-index: 100 !important;
+  pointer-events: auto !important;
+}
+
+/* Prevent clicks on dialog overlay from reaching elements underneath */
+[data-slot='dialog-overlay'] {
+  pointer-events: auto !important;
+}
+
+/* Flashcard flip animation */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
+/* Animated Lines - Left to Right */
+@keyframes line-ltr {
+  0% {
+    transform: translateX(0);
+    opacity: 0.8;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 200px));
+    opacity: 0.8;
+  }
+}
+
+/* Animated Lines - Right to Left */
+@keyframes line-rtl {
+  0% {
+    transform: translateX(0);
+    opacity: 0.8;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(-100vw - 200px));
+    opacity: 0.8;
+  }
+}
+
+.line-ltr-1 {
+  animation: line-ltr 8s linear infinite;
+  animation-delay: 0s;
+}
+
+.line-ltr-2 {
+  animation: line-ltr 12s linear infinite;
+  animation-delay: 2s;
+}
+
+.line-ltr-3 {
+  animation: line-ltr 6s linear infinite;
+  animation-delay: 1s;
+}
+
+.line-ltr-4 {
+  animation: line-ltr 10s linear infinite;
+  animation-delay: 3s;
+}
+
+.line-ltr-5 {
+  animation: line-ltr 9s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.line-ltr-6 {
+  animation: line-ltr 14s linear infinite;
+  animation-delay: 4s;
+}
+
+.line-rtl-1 {
+  animation: line-rtl 7s linear infinite;
+  animation-delay: 0.5s;
+}
+
+.line-rtl-2 {
+  animation: line-rtl 11s linear infinite;
+  animation-delay: 2.5s;
+}
+
+.line-rtl-3 {
+  animation: line-rtl 13s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.line-rtl-4 {
+  animation: line-rtl 8s linear infinite;
+  animation-delay: 3.5s;
+}
+
+.line-rtl-5 {
+  animation: line-rtl 10s linear infinite;
+  animation-delay: 2s;
+}
+
+.line-rtl-6 {
+  animation: line-rtl 9s linear infinite;
+  animation-delay: 4.5s;
+}
+
+/* Animated Question Marks - Fade in/out and move */
+@keyframes question-mark-fade-move {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.8);
+  }
+  15% {
+    opacity: 0.7;
+    transform: translate(30px, -40px) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-25px, 35px) scale(1.1);
+  }
+  85% {
+    opacity: 0.7;
+    transform: translate(40px, -30px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.8);
+  }
+}
+
+.question-mark-1 {
+  animation: question-mark-fade-move 12s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.question-mark-2 {
+  animation: question-mark-fade-move 15s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.question-mark-3 {
+  animation: question-mark-fade-move 10s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.question-mark-4 {
+  animation: question-mark-fade-move 14s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.question-mark-5 {
+  animation: question-mark-fade-move 11s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
+
+.question-mark-6 {
+  animation: question-mark-fade-move 13s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.question-mark-7 {
+  animation: question-mark-fade-move 16s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.question-mark-8 {
+  animation: question-mark-fade-move 9s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.question-mark-9 {
+  animation: question-mark-fade-move 12s ease-in-out infinite;
+  animation-delay: 3.5s;
+}
+
+.question-mark-10 {
+  animation: question-mark-fade-move 13s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+/* Hide scrollbars */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}

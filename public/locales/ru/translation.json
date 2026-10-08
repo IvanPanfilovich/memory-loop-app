@@ -1,0 +1,710 @@
+{
+  "title": "Memory Loop",
+  "header": {
+    "profile": "Профиль",
+    "signIn": "Войти",
+    "install": "Установить",
+    "credits": "кредиты",
+    "installDialog": {
+      "title": "Установить Memory Loop",
+      "description": "Нажмите кнопку ниже, чтобы установить приложение на ваше устройство.",
+      "manualDescription": "Следуйте этим шагам для установки приложения:",
+      "installButton": "Установить сейчас",
+      "chromeTitle": "Chrome / Edge (Десктоп):",
+      "chromeStep1": "Нажмите на иконку установки в адресной строке",
+      "chromeStep2": "Или перейдите в Меню → Установить Memory Loop",
+      "mobileTitle": "Мобильный (Chrome / Safari):",
+      "mobileStep1": "Нажмите на кнопку меню (три точки)",
+      "mobileStep2": "Выберите \"Добавить на главный экран\" или \"Установить приложение\"",
+      "note": "Опция установки может появиться в меню браузера или адресной строке."
+    }
+  },
+  "sidebar": {
+    "brand": "Memory Loop",
+    "main": "Главная",
+    "privacyPolicy": "Политика конфиденциальности",
+    "termsAndConditions": "Условия и положения",
+    "faq": "Часто задаваемые вопросы",
+    "profile": "Профиль",
+    "logout": "Выйти"
+  },
+  "landing": {
+    "title": "Добро пожаловать в Memory Loop",
+    "subtitle": "Добро пожаловать"
+  },
+  "dashboard": {
+    "title": "Панель управления",
+    "sections": {
+      "pinned": "Закрепленные",
+      "today": "Сегодня",
+      "thisWeek": "На этой неделе",
+      "thisMonth": "В этом месяце",
+      "earlier": "Ранее",
+      "viewAll": "Показать все",
+      "noRecaps": "Пока нет резюме."
+    },
+    "search": {
+      "placeholder": "Поиск",
+      "clear": "Очистить поиск"
+    },
+    "createRecap": {
+      "youtube": "YouTube",
+      "documents": "Документы",
+      "youtubeTab": "Ссылка YouTube",
+      "documentsTab": "Документы",
+      "textTab": "Загрузите конспект",
+      "textPlaceholder": "Вставьте ваши заметки (поддерживается Markdown)...",
+      "textHint": "10-50 000 символов. Поддерживается Markdown.",
+      "textTooShort": "Пожалуйста, вставьте минимум 10 символов",
+      "textTooLong": "Текст слишком длинный (максимум 50 000 символов)",
+      "linkRequired": "Пожалуйста, введите ссылку на YouTube",
+      "documentsRequired": "Пожалуйста, загрузите хотя бы один документ",
+      "generating": "Генерация тем...",
+      "button": "Создать новое резюме",
+      "title": "Создать новое резюме",
+      "description": "Вставьте ссылку на YouTube, чтобы создать резюме."
+    },
+    "zeroState": {
+      "documentsInstructions": "Загрузите PDF или Word (.docx), чтобы создать ваше первое резюме.",
+      "textInstructions": "Вставьте ваши заметки, чтобы сгенерировать карточки. Текст резюме будет сохранён точно как вы его предоставили.",
+      "title": "Превратите любой контент в резюме, которое вы действительно запомните",
+      "inputPlaceholder": "Вставьте ссылку на YouTube…",
+      "instructions": "Вставьте ссылку на YouTube, чтобы создать ваше первое резюме.",
+      "generateButton": "Сгенерировать темы"
+    },
+    "themes": {
+      "title": "Темы из этого эпизода",
+      "untitled": "Безымянная тема",
+      "clearAll": "Очистить все",
+      "selectAll": "Выбрать все",
+      "back": "Вернуться на панель управления",
+      "sources": "Источники"
+    },
+    "material": {
+      "editSummary": "Редактировать",
+      "cancelEdit": "Отмена",
+      "saveSummary": "Сохранить",
+      "summaryEditPlaceholder": "Отредактируйте резюме (поддерживается Markdown)...",
+      "summaryEditHint": "10-50 000 символов. Поддерживается Markdown.",
+      "summaryUpdated": "Резюме обновлено.",
+      "summaryUpdateError": "Не удалось обновить резюме",
+      "summaryValidationError": "Резюме должно быть 10-50 000 символов.",
+      "audioOutdated": "Аудио устарело. Сгенерируйте новую версию по вашему обновлённому резюме.",
+      "titleFallback": "Ваше персонализированное резюме",
+      "back": "Вернуться на панель управления",
+      "audioTitle": "Прослушайте ваше аудио резюме",
+      "summaryTitle": "Прочитайте основные идеи",
+      "flashcardsTitle": "Повторите с помощью карточек",
+      "sources": "Источники",
+      "generatingAudio": "Генерация аудио...",
+      "almostThere": "Почти готово...",
+      "finishingUp": "Завершаем создание вашего аудио...",
+      "noAudio": "Аудио пока недоступно. Сгенерируйте аудио из вашего резюме.",
+      "generateAudio": "Сгенерировать аудио",
+      "regenerateAudio": "Пересоздать",
+      "ttsError": "Не удалось сгенерировать аудио",
+      "loadError": "Не удалось загрузить резюме",
+      "badge": "Резюме Memory Loop",
+      "copyMarkdown": "Копировать markdown",
+      "copied": "Скопировано!",
+      "loadingSummary": "Загрузка резюме...",
+      "noFlashcards": "Для этого резюме пока нет карточек."
+    }
+  },
+  "home": {
+    "description": "Ваша платформа",
+    "buttons": {
+      "signIn": "Войти",
+      "noAccount": {
+        "text": "Нет аккаунта? ",
+        "link": "Зарегистрироваться"
+      },
+      "goToHome": "На главную"
+    },
+    "dialogs": {
+      "signIn": {
+        "title": "Sign In",
+        "buttons": {
+          "signIn": "Sign In",
+          "signUp": "Sign Up",
+          "forgotPassword": "Forgot Password?",
+          "or": "or",
+          "google": "Continue with Google"
+        },
+        "errors": {
+          "emailVerification": {
+            "text1": "Please verify your email address",
+            "text2": "Check your inbox for a verification link"
+          },
+          "invalidCredentials": "Invalid email or password",
+          "accountNotVerified": "Please verify your email before signing in",
+          "accountLocked": "Account is locked. Please contact support",
+          "networkError": "Network error. Please check your connection and try again.",
+          "serverError": "Server error. Please try again later.",
+          "timeout": "Request timed out. Please try again.",
+          "unexpected": "Invalid email or password"
+        }
+      },
+      "signUp": {
+        "title": "Sign Up",
+        "successMessage": "Account created successfully! Please sign in with your credentials.",
+        "steps": {
+          "create": "Create Account",
+          "preferences": "Preferences",
+          "terms": "Terms & Conditions",
+          "consent": "Consent",
+          "verify": "Verify Email",
+          "complete": "Complete",
+          "buttons": {
+            "back": "Back",
+            "next": "Next"
+          }
+        },
+        "fields": {
+          "displayName": {
+            "label": "Display Name",
+            "placeholder": "Enter your display name"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "Enter your email"
+          },
+          "password": {
+            "label": "Password",
+            "placeholder": "Enter your password"
+          },
+          "confirmPassword": {
+            "label": "Confirm Password",
+            "placeholder": "Confirm your password"
+          },
+          "terms": {
+            "text1": "I agree to the ",
+            "text2": "Terms of Service",
+            "text3": " and ",
+            "text4": "Privacy Policy",
+            "text5": ".",
+            "checkbox": "I agree to the terms and conditions",
+            "validation": {
+              "required": "You must agree to the terms and conditions"
+            }
+          },
+          "verify": {
+            "label": "Click next and we will send a verification link to ",
+            "email": " so you can verify your account."
+          },
+          "complete": {
+            "label": "Go to your email inbox and follow the verification link to complete account creation.",
+            "detectingCountry": "Detecting your country...",
+            "countryNotDetected": "Country not detected",
+            "countryDetectionFailed": "Detection failed",
+            "countryDetectionNote": "We automatically detect your country based on your location. This helps us provide localized content.",
+            "accountCreated": "Account created successfully! Check your email for verification.",
+            "didntReceive": "Didn't receive the email?",
+            "resend": {
+              "button": "Resend Email",
+              "disabled": "Resend in {{time}}s",
+              "tooltip": "Please wait {{time}} seconds before resending",
+              "success": "Verification email sent successfully!",
+              "error": "Failed to send verification email. Please try again."
+            }
+          }
+        },
+        "buttons": {
+          "back": "Back",
+          "next": "Next"
+        }
+      },
+      "resetPassword": {
+        "title": "Reset Password",
+        "description": "Enter your email address and we'll send you a link to reset your password.",
+        "buttons": {
+          "back": "Back",
+          "send": "Send Reset Email",
+          "save": "Save New Password"
+        },
+        "fields": {
+          "email": {
+            "label": "Email Address",
+            "placeholder": "Enter your email address"
+          },
+          "password": {
+            "label": "New Password",
+            "placeholder": "Enter your new password"
+          },
+          "confirmPassword": {
+            "label": "Confirm New Password",
+            "placeholder": "Confirm your new password"
+          }
+        },
+        "messages": {
+          "emailSent": "Password reset email sent! Check your inbox.",
+          "passwordReset": "Password reset successfully! You can now sign in with your new password.",
+          "error": "Failed to reset password. Please try again.",
+          "invalidToken": "This password reset link is invalid or has expired. Please request a new one.",
+          "tokenUsed": "This password reset link has already been used. Please request a new one.",
+          "weakPassword": "Password does not meet security requirements. Please choose a stronger password.",
+          "userNotFound": "User account not found. Please request a new password reset link."
+        }
+      }
+    }
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signInTitle": "Welcome Back",
+    "home": "Home",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "emailRequired": "Email is required",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "passwordRequired": "Password is required",
+    "signingIn": "Signing In...",
+    "loginRequired": "Login Required",
+    "loginRequiredMessage": "Вам необходимо войти в систему для доступа к этой странице. Пожалуйста, войдите, чтобы продолжить.",
+    "loginSuccess": "Welcome back! You have successfully logged in.",
+    "googleLogin": "Continue with Google",
+    "oauthLoggingIn": "Signing in with {{provider}}...",
+    "oauthLoginSuccess": "Successfully signed in with {{provider}}!",
+    "oauthLoginError": "Failed to sign in. Please try again.",
+    "signUp": {
+      "successMessage": "Account created successfully! Please sign in with your credentials."
+    },
+    "verifyEmail": {
+      "processing": {
+        "title": "Подтверждение вашей электронной почты...",
+        "description": "Пожалуйста, подождите, пока мы подтверждаем ваш адрес электронной почты."
+      },
+      "success": {
+        "title": "Электронная почта успешно подтверждена!",
+        "description": "Ваша электронная почта подтверждена. Перенаправление...",
+        "redirecting": "Перенаправление..."
+      },
+      "error": {
+        "title": "Ошибка подтверждения",
+        "description": "Что-то пошло не так при подтверждении электронной почты.",
+        "redirecting": "Перенаправление на страницу входа...",
+        "missingToken": "Токен подтверждения отсутствует. Пожалуйста, проверьте свою электронную почту для получения правильной ссылки.",
+        "expired": "Срок действия этой ссылки подтверждения истек. Пожалуйста, запросите новую.",
+        "alreadyVerified": "Эта электронная почта уже подтверждена.",
+        "networkError": "Ошибка сети. Пожалуйста, проверьте подключение и попробуйте снова."
+      }
+    },
+    "errors": {
+      "invalidCredentials": "Invalid email or password",
+      "accountNotVerified": "Please verify your email before signing in",
+      "accountLocked": "Account is locked. Please contact support",
+      "unexpected": "Invalid email or password",
+      "invalidEmail": "Please enter a valid email address",
+      "invalidPassword": "Password must be 8-50 characters and contain uppercase, lowercase, number, and special character",
+      "invalidDisplayName": "Display name must be 3-20 characters",
+      "invalidDateOfBirth": "Date of birth must be in YYYY-MM-DD format",
+      "emailAlreadyRegistered": "An account with this email already exists",
+      "invalidRequest": "Please check your information and try again",
+      "serverError": "Server error. Please try again later",
+      "failedToRegister": "Failed to register the user!",
+      "loginFailed": "Login failed",
+      "registrationFailed": "Registration failed",
+      "unknownError": "Unknown error"
+    }
+  },
+  "globalFields": {
+    "dateOfBirth": {
+      "placeholder": "YYYY-MM-DD"
+    },
+    "displayName": {
+      "label": "Display Name",
+      "validation": {
+        "required": "Display name is required",
+        "minLength": "Display name must be at least 3 characters",
+        "maxLength": "Display name must not exceed 20 characters",
+        "range": "Display name must be between 3 and 20 characters"
+      }
+    },
+    "email": {
+      "label": "Email",
+      "validation": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address",
+        "minLength": "Email must be at least 3 characters",
+        "maxLength": "Email must not exceed 50 characters"
+      }
+    },
+    "password": {
+      "label": "Password",
+      "validation": {
+        "required": "Password is required",
+        "minLength": "Password must be at least 8 characters",
+        "maxLength": "Password must not exceed 50 characters",
+        "pattern": "Password must contain at least one uppercase letter, one lowercase letter, and one number",
+        "weakStrength": "Password strength is too weak"
+      }
+    },
+    "confirmPassword": {
+      "label": "Confirm Password",
+      "validation": {
+        "required": "Please confirm your password",
+        "match": "Passwords do not match"
+      }
+    },
+    "languages": {
+      "locale": {
+        "label": "Language",
+        "tooltip": "Select your preferred language"
+      }
+    }
+  },
+  "globals": {
+    "passwordStrength": {
+      "title": "Password Strength",
+      "tooltip": "Password should contain uppercase, lowercase, numbers, and special characters"
+    }
+  },
+  "oauth": {
+    "callback": {
+      "processing": {
+        "title": "Completing sign in...",
+        "description": "Please wait while we complete your Google sign in."
+      },
+      "success": {
+        "title": "Sign in successful!",
+        "description": "Welcome! Redirecting to your dashboard...",
+        "redirecting": "Redirecting..."
+      },
+      "error": {
+        "title": "Sign in failed",
+        "description": "Something went wrong during the sign in process.",
+        "redirecting": "Redirecting to login page..."
+      }
+    }
+  },
+  "theme": {
+    "switchToLight": "Переключить на светлую тему",
+    "switchToDark": "Переключить на тёмную тему"
+  },
+  "ui": {
+    "sidebar": "Sidebar",
+    "toggleSidebar": "Toggle Sidebar",
+    "sidebarDescription": "Displays the mobile sidebar.",
+    "close": "Close"
+  },
+  "validation": {
+    "email": {
+      "required": "Email is required",
+      "invalid": "Please enter a valid email address"
+    },
+    "password": {
+      "required": "Password is required",
+      "minLength": "Password must be at least 6 characters"
+    }
+  },
+  "footer": {
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms & Conditions",
+    "contactUs": "Contact Us"
+  },
+  "profile": {
+    "title": "Profile",
+    "notAuthenticated": {
+      "title": "Not Authenticated",
+      "description": "Please log in to view your profile."
+    },
+    "sections": {
+      "personalInfo": "Personal Information",
+      "contactInfo": "Contact Information",
+      "preferences": "Preferences",
+      "accountInfo": "Account Information"
+    },
+    "fields": {
+      "name": "Name",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "displayName": "Display Name",
+      "email": "Email",
+      "userId": "User ID",
+      "dateOfBirth": {
+        "label": "Date of Birth",
+        "validation": {
+          "required": "Date of birth is required",
+          "invalid": "Invalid date format",
+          "format": "Please enter date in YYYY-MM-DD format",
+          "future": "Date of birth must be in the past",
+          "age": "You must be at least 13 years old"
+        }
+      },
+      "language": "Language",
+      "currency": "Currency",
+      "country": "Country",
+      "accountType": "Account Type",
+      "memberSince": "Member Since",
+      "status": "Status",
+      "notSet": "Not set",
+      "anonymous": "Anonymous",
+      "registered": "Registered",
+      "recently": "Recently",
+      "active": "Active"
+    },
+    "actions": {
+      "logout": "Logout",
+      "deleteAccount": "Delete Account",
+      "backToHome": "Back to Home"
+    },
+    "deleteAccount": {
+      "title": "Delete Account",
+      "description": "This action cannot be undone. This will permanently delete your account and remove all your data from our servers.",
+      "enterPassword": "Enter your password to continue",
+      "enterEmail": "Enter your email to continue",
+      "passwordPlaceholder": "Enter your password",
+      "emailPlaceholder": "Enter your email",
+      "warning": "This action cannot be undone. All your data will be permanently deleted.",
+      "continue": "Continue",
+      "confirmTitle": "Are you absolutely sure?",
+      "confirmDescription": "This will permanently delete your account and all associated data.",
+      "finalWarning": "This action cannot be undone. This will permanently delete:",
+      "warning1": "Your account and profile information",
+      "warning3": "All your settings and preferences",
+      "confirmPassword": "You are about to permanently delete your account.",
+      "confirmOAuth": "You are about to permanently delete the account associated with {email}.",
+      "deleting": "Deleting...",
+      "deletePermanently": "Yes, delete permanently",
+      "successMessage": "Account deleted successfully",
+      "errorMessage": "Failed to delete account. Please try again.",
+      "unsupportedAuthType": "Unsupported authentication type. Please contact support.",
+      "debugInfo": "Debug: oauth={{oauth}}, user={{user}}"
+    },
+    "errors": {
+      "validationErrors": "Please fix validation errors before saving"
+    },
+    "updateSuccess": "Profile updated successfully!",
+    "updateError": "Failed to save changes. Please try again.",
+    "validation": {
+      "invalidDate": "Invalid date format",
+      "dateInPast": "Date of birth must be in the past",
+      "minAge": "You must be at least 13 years old",
+      "localeMaxLength": "Locale must not exceed 100 characters",
+      "currencyMaxLength": "Currency must not exceed 100 characters"
+    },
+    "theme": {
+      "title": "Настройка темы",
+      "description": "Настройте цвета интерфейса отдельно для светлой и тёмной темы.",
+      "premiumOnly": "Настройка темы доступна только для премиум-пользователей. Обновите подписку, чтобы разблокировать эту функцию.",
+      "premiumDescription": "Настройте цвета интерфейса отдельно для светлой и тёмной темы. Сделайте интерфейс по-настоящему своим с персонализированными цветовыми схемами.",
+      "lightMode": "Светлый режим",
+      "darkMode": "Темный режим",
+      "reset": "Сбросить",
+      "resetConfirm": "Вы уверены, что хотите сбросить все цвета к значениям по умолчанию?",
+      "groups": {
+        "base": "Базовые цвета",
+        "primary": "Основные цвета",
+        "secondary": "Второстепенные цвета",
+        "accent": "Акцентные цвета",
+        "destructive": "Цвета ошибок",
+        "muted": "Приглушённые цвета",
+        "utility": "Служебные цвета"
+      },
+      "colors": {
+        "background": "Фон",
+        "foreground": "Текст",
+        "card": "Карточка",
+        "cardForeground": "Текст карточки",
+        "popover": "Всплывающее окно",
+        "popoverForeground": "Текст всплывающего окна",
+        "primary": "Основной",
+        "primaryForeground": "Текст на основном",
+        "secondary": "Второстепенный",
+        "secondaryForeground": "Текст на второстепенном",
+        "accent": "Акцент",
+        "accentForeground": "Текст на акценте",
+        "destructive": "Деструктивный",
+        "destructiveForeground": "Текст на деструктивном",
+        "muted": "Приглушенный",
+        "mutedForeground": "Приглушённый текст",
+        "border": "Граница",
+        "input": "Поле ввода",
+        "ring": "Обводка фокуса"
+      }
+    },
+    "themeCustomizer": {
+      "resetConfirmTitle": "Сбросить цвета темы?",
+      "resetConfirmDescription": "Вы уверены, что хотите сбросить все пользовательские цвета темы до значений по умолчанию? Это действие нельзя отменить.",
+      "resetSuccess": "Цвета темы сброшены до значений по умолчанию.",
+      "resetError": "Не удалось сбросить цвета темы.",
+      "apply": "Применить изменения",
+      "applySuccess": "Изменения темы применены."
+    }
+  },
+  "languages": {
+    "en": "English",
+    "ru": "Русский"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "redirecting": "Перенаправление...",
+    "edit": "Редактировать",
+    "save": "Сохранить",
+    "saving": "Сохранение...",
+    "cancel": "Отмена",
+    "backToHome": "Назад на главную",
+    "ok": "ОК",
+    "continue": "Продолжить",
+    "unexpectedError": "Что-то пошло не так"
+  },
+  "languageSwitcher": {
+    "saveError": "Failed to save language preference"
+  },
+  "errors": {
+    "pageNotFound": "404 - Page Not Found"
+  },
+  "notFound": {
+    "errorCode": "404",
+    "title": "Страница не найдена",
+    "description": "Извините, мы не смогли найти страницу, которую вы ищете. Возможно, она была перемещена, удалена или вы ввели неправильный URL.",
+    "goHome": "Перейти на главную",
+    "goBack": "Назад"
+  },
+  "resetPassword": {
+    "title": "Reset Password"
+  },
+  "currencies": {
+    "USD": "US Dollar",
+    "EUR": "Euro",
+    "GBP": "British Pound",
+    "JPY": "Japanese Yen",
+    "CAD": "Canadian Dollar",
+    "AUD": "Australian Dollar",
+    "CHF": "Swiss Franc",
+    "CNY": "Chinese Yuan",
+    "SEK": "Swedish Krona",
+    "NZD": "New Zealand Dollar"
+  },
+  "accessibility": {
+    "toggleTheme": "Toggle theme",
+    "goToPreviousPage": "Go to previous page",
+    "goToNextPage": "Go to next page",
+    "commandPalette": "Command Palette",
+    "commandDescription": "Search for a command to run...",
+    "pagination": "pagination",
+    "breadcrumb": "breadcrumb",
+    "previous": "Previous",
+    "next": "Next",
+    "morePages": "More pages",
+    "more": "More",
+    "previousSlide": "Previous slide",
+    "nextSlide": "Next slide"
+  },
+  "roleBasedWrapper": {
+    "insufficientPermissions": "You do not have permission to perform this action",
+    "roles": {
+      "admin": "Admin",
+      "collaborator": "Collaborator"
+    },
+    "permissions": {
+      "manageUsers": "Manage Users",
+      "createInvites": "Create Invites",
+      "removeUsers": "Remove Users",
+      "updateUserRoles": "Update User Roles"
+    },
+    "tooltips": {
+      "createInvites": "This function is only allowed for admins",
+      "manageUsers": "This function is only allowed for admins"
+    }
+  },
+  "notifications": {
+    "errors": {
+      "serverError": {
+        "title": "Server Error",
+        "description": "Something went wrong. Please try again later."
+      }
+    }
+  },
+  "popup": {
+    "close": "Close"
+  },
+  "flashcard": {
+    "clickToFlip": "Нажмите, чтобы перевернуть",
+    "clickToFlipBack": "Нажмите, чтобы перевернуть обратно"
+  },
+  "audio": {
+    "noAudioAvailable": "Аудио недоступно",
+    "play": "Воспроизвести",
+    "pause": "Пауза"
+  },
+  "referrals": {
+    "title": "Пригласить друга",
+    "description": "Поделитесь своей реферальной ссылкой и зарабатывайте кредиты! Вознаграждение зависит от того, сколько кредитов использует приглашенный друг.",
+    "referralCode": "Ваш реферальный код",
+    "inviteLink": "Реферальная ссылка",
+    "referredCount": "Приглашено друзей",
+    "share": "Поделиться",
+    "copy": "Копировать",
+    "copied": "Скопировано!",
+    "codeCopied": "Реферальный код скопирован!",
+    "copiedToast": "Реферальная ссылка скопирована в буфер обмена!",
+    "copyError": "Не удалось скопировать ссылку",
+    "fetchError": "Не удалось загрузить информацию о реферальной программе",
+    "loading": "Загрузка информации о реферальной программе...",
+    "shareTitle": "Присоединяйтесь к Memory Loop",
+    "shareText": "Присоединяйтесь к Memory Loop и начните создавать персонализированные резюме! Используйте мою реферальную ссылку:",
+    "tryAgain": "Попробовать снова",
+    "enterCodeTitle": "Ввести реферальный код",
+    "enterCodeDescription": "Введите реферальный код, чтобы получить кредиты при регистрации.",
+    "codePlaceholder": "Реферальный код (необязательно)",
+    "enterCode": "Пожалуйста, введите реферальный код",
+    "codeSavedSuccessfully": "Реферальный код успешно сохранен! Продолжите регистрацию через email или OAuth.",
+    "saveError": "Не удалось сохранить реферальный код. Пожалуйста, попробуйте снова.",
+    "haveCode": "Есть реферальный код?"
+  },
+  "recap": {
+    "status": {
+      "processing": "Обработка...",
+      "generating": "Генерация...",
+      "generatingAudio": "Генерация аудио..."
+    },
+    "recap": "резюме",
+    "min": "мин",
+    "cards": "карточки",
+    "lastReviewed": "последний просмотр",
+    "renameMenu": "Переименовать",
+    "deleteMenu": "Удалить",
+    "rename": {
+      "title": "Переименовать резюме",
+      "description": "Введите новое название для этого резюме.",
+      "placeholder": "Название резюме"
+    },
+    "delete": {
+      "title": "Удалить резюме",
+      "description": "Вы уверены, что хотите удалить это резюме? Это действие нельзя отменить.",
+      "recapName": "Резюме:",
+      "confirm": "Удалить резюме"
+    }
+  },
+  "cookieConsent": {
+    "title": "Согласие на использование файлов cookie и аналитики",
+    "description": "Мы используем Google Analytics, чтобы понять, как посетители взаимодействуют с нашим веб-сайтом. Это помогает нам улучшить ваш опыт. Вы можете разрешить или отклонить отслеживание аналитики.",
+    "allow": "Разрешить аналитику",
+    "decline": "Отклонить"
+  },
+  "documentUpload": {
+    "dragDrop": "Перетащите документы сюда или",
+    "browse": "выберите файлы",
+    "supportedFormats": "Поддерживаемые форматы: PDF, Word (.doc, .docx)",
+    "maxFiles": "Макс. {{count}} файлов",
+    "maxFilesExceeded": "Вы можете загрузить максимум {{count}} файлов.",
+    "maxFilesReached": "Максимум {{count}} файлов разрешено",
+    "maxTotalSize": "Максимальный общий размер: {{size}}",
+    "totalSize": "Всего: {{size}} / {{max}}",
+    "filesCount": "{{count}} из {{max}} файлов",
+    "fileTooLarge": "Файл \"{{name}}\" слишком большой. Общий размер не должен превышать {{size}}.",
+    "totalSizeExceeded": "Достигнут лимит общего размера. Максимальный общий размер: {{size}}.",
+    "invalidFileType": "Неверный тип файла. Пожалуйста, загружайте только файлы PDF, Word (.doc, .docx)."
+  },
+  "faq": {
+    "title": "Часто задаваемые вопросы",
+    "subtitle": "Найдите ответы на распространенные вопросы о Memory Loop",
+    "error": "Не удалось загрузить содержимое FAQ",
+    "searchPlaceholder": "Поиск по FAQ...",
+    "clearSearch": "Очистить поиск",
+    "searchResults": "Найдено результатов: {{count}}",
+    "noResults": "Результаты не найдены",
+    "tryDifferentSearch": "Попробуйте другой поисковый запрос"
+  }
+}
